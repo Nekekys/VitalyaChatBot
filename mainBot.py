@@ -34,7 +34,7 @@ model = Doc2Vec.load('models_doc2vec_200_vector_size_vk/ko_d2v.model')
 arrError = ["без цыганских букавак пожалуйста","ты издеваешься чтоле","сколько можно латиницы я же русский","фу убери","да что с тобой не так","ясно."]
 
 
-bot = Bot(token='5285737434:AAFTXQQ09YY8a2daESKS627L2dvBN1VfA6M')
+bot = Bot(token='ваш токен')
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
