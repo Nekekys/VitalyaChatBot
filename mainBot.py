@@ -30,11 +30,10 @@ for dig in dialogs:
 
 model = Doc2Vec.load('models_doc2vec_200_vector_size_vk/ko_d2v.model')
 
-
 arrError = ["без цыганских букавак пожалуйста","ты издеваешься чтоле","сколько можно латиницы я же русский","фу убери","да что с тобой не так","ясно."]
 
 
-bot = Bot(token='ваш токен')
+bot = Bot(token='5285737434:AAFTXQQ09YY8a2daESKS627L2dvBN1VfA6M')
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
@@ -45,7 +44,7 @@ async def process_start_command(message: types.Message):
 async def main_message_handler(msg: types.Message):
     message = msg.text
     vecMessage = []
-
+    message = message.lower()
     message = re.sub('[^А-Яа-яё\s]+', '', message)
     message = ' '.join(message.split())
     if len(message) == 0:
